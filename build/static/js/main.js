@@ -1,7 +1,5 @@
 "use strict";
 
-var hello = function hello() {
-  return console.log('hello');
+var add = function add(a, b) {
+  return a + b;
 };
-
-hello();

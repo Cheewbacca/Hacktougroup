@@ -6,19 +6,19 @@ module.exports = function(){
         .pipe($.gulp.dest('build/static/js/'))
         .pipe($.bs.reload({
             stream: true
-        }))
+        }));
     });
 
     const babel = require('gulp-babel');
 
     $.gulp.task('scripts', function(){
-        return $.gulp.src('src/js/*.js')
+        return $.gulp.src('src/js/**/*.js')
         .pipe(babel({
             presets: ['@babel/env']
         }))
         .pipe($.gulp.dest('build/static/js/'))
         .pipe($.bs.reload({
             stream: true
-        }))
+        }));
     });
 }

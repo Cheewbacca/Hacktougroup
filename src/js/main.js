@@ -1,3 +1,1 @@
-const hello = () => console.log('hello');
-
-hello();
+const add = (a, b) => a + b;

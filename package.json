@@ -27,6 +27,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
-    "gulp-babel": "^8.0.0"
+    "gulp-babel": "^8.0.0",
+    "qunit": "^2.12.0"
   }
 }
