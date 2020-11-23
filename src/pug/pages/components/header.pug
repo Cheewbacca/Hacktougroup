@@ -1,0 +1,11 @@
+header.header  
+    a(href="#").header-logo.logo_font-header Hg
+    #burger
+    nav.header__navigation 
+        ul 
+            -let pages = new Map();
+            -pages.set('Главная', '#').set('Преимущества', '#').set('О нас', '#').set('Услуги', '#').set('Статьи', '#').set('Контакты', '#');
+            -for (let [key, value] of pages){
+                li
+                    a(href="" + value).menu_font= key
+            -}
