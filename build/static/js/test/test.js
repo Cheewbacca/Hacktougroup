@@ -1,7 +1,7 @@
 "use strict";
 
-QUnit.module('main', function () {
-  QUnit.test('should add two numbers', function (assert) {
-    assert.equal(add(1, 1), 2, '1 + 1 = 2');
-  });
+QUnit.test("should show alternative menu", function (assert) {
+  var burger = $('#burger');
+  burger.click();
+  assert.equal(burger.hasClass('closed'), true, "It has the class!");
 });

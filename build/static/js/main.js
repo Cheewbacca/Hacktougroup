@@ -1,9 +1,5 @@
 "use strict";
 
-var add = function add(a, b) {
-  return a + b;
-};
-
 var burger = $('#burger');
 burger.on('click', function () {
   burger.toggleClass('closed');

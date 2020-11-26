@@ -1,5 +1,3 @@
-const add = (a, b) => a + b;
-
 var burger = $('#burger');
 
 burger.on('click',  function(){
