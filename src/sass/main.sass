@@ -12,6 +12,46 @@ body
         flex-direction: column;
         height: 100vh;
         width: calculateWidth(200)
+        #burger
+            width: calculateWidth(23)
+            height: calculateWidth(23)
+            margin: calculateHeight(35) auto calculateHeight(75)
+            position: relative
+            cursor: pointer
+            &::after,
+            &::before
+                content: ' '
+                width: 100%;
+                height: 1px;
+                background-color: $white;
+                position: absolute;
+                left: 0
+                top: 0;
+            &::before
+                width: 50%;
+                left: 50%;
+                margin-left: -25%;
+                bottom: 50%;
+                top: initial
+        .closed
+            &::after,
+            &::before
+                content: ' '
+                width: 100%;
+                height: 1px;
+                background-color: $white;
+                position: absolute;
+                left: 0
+                top: 0 !important;
+                transform: rotate(45deg)
+                bottom: initial !important;
+                margin-left: initial;
+            &::before
+                width: 100% !important; 
+                left: 0 !important; 
+                margin-left: initial !important; 
+                bottom: initial !important;
+                transform: rotate(-45deg)
         &-logo
             color: $blue;
             margin: 0 auto
@@ -37,15 +77,20 @@ body
                     a 
                         color: $darkGray
                         transition: color .3s
-                .active
+            &-closed
+                li 
+                    &:hover
+                        a 
+                            color: $blue ;
                     a 
-                        color: $blue;
-                        position: relative
-                        &::after
-                            position: absolute;
-                            content: '';
-                            width: 100%;
-                            height: 2px
-                            background-color: $blue;
-                            bottom: -5px
-                            left: 0
+                        color: $white
+                        
+            .hidded
+                display: none
+
+            &-social
+                a 
+                    &:not(:first-child)
+                        margin-right: 12px
+                    svg 
+                        width: calculateWidth(33)
