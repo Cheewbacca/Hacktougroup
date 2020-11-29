@@ -1,17 +1,13 @@
 header.header  
     a(href="#").header-logo.logo_font-header Hg
-    #burger
+    .burger
     nav.header__navigation 
         ul.header__navigation-opened
-            -let pages = new Map();
-            -pages.set('Главная', '#').set('Преимущества', '#').set('О нас', '#').set('Услуги', '#').set('Статьи', '#').set('Контакты', '#');
-            -for (let [key, value] of pages){
-                li
-                    a(href="" + value).menu_font= key
-            -}
+            li( data-menuanchor="firstPage" ).active_link
+                a(href="#firstPage").menu_font Главная
+            li( data-menuanchor="secondPage" )
+                a(href="#secondPage").menu_font Преимущества
         ul.header__navigation-closed.hidded
-            -let pagesAlternative = new Map();
-            -pagesAlternative.set('Главная', '#').set('Услуги', '#').set('Отзывы', '#');
             -for (let [key, value] of pagesAlternative){
                 li
                     a(href="" + value).menu_font= key

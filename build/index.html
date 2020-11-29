@@ -3,21 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static\css\main.css">
-    <link rel="stylesheet" href="static\css\slick.css">
+    <link rel="stylesheet" href="static\css\main.css"><link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
   </head>
   <body>
-    <section class="section first_section">
+    <section class="section">
       <header class="header"> <a class="header-logo logo_font-header" href="#">Hg</a>
-        <div id="burger"></div>
+        <div class="burger"></div>
         <nav class="header__navigation"> 
           <ul class="header__navigation-opened">
-            <li><a class="menu_font" href="#">Главная</a></li>
-            <li><a class="menu_font" href="#">Преимущества</a></li>
-            <li><a class="menu_font" href="#">О нас</a></li>
-            <li><a class="menu_font" href="#">Услуги</a></li>
-            <li><a class="menu_font" href="#">Статьи</a></li>
-            <li><a class="menu_font" href="#">Контакты</a></li>
+            <li class="active_link" data-menuanchor="firstPage"><a class="menu_font" href="#firstPage">Главная</a></li>
+            <li data-menuanchor="secondPage"><a class="menu_font" href="#secondPage">Преимущества</a></li>
           </ul>
           <ul class="header__navigation-closed hidded">
             <li><a class="menu_font" href="#">Главная</a></li>
@@ -46,9 +42,59 @@
           </ul>
         </nav>
       </header>
-      <div class="first_section-content"></div>
+      <div id="fullpage">      
+        <section class="section first_section">
+          <div class="first_section-content main_padding">
+            <div class="first_section-content-block">
+              <h1 class="logo_font">Hacktougroup</h1>
+              <p class="main_font">Мы знаем как решить Ваши проблемы</p>
+            </div>
+            <div class="first_section-content-block">
+              <div class="image_block"><img src="static/img/logo.png" alt=""><a class="medium_font button" href="#">Заказать взлом</a></div><a class="arrow_down" href="#"> </a>
+            </div>
+            <div class="first_section-content-block">
+              <p class="main_font">Сервис по взлому соц сетей и почт на заказ</p>
+            </div>
+          </div>
+        </section>
+        <section class="section second_section">
+          <div class="second_section-content main_padding">
+            <div class="second_section-content-left swiper-container">
+              <h2 class="blue_font">Преимущества</h2>
+              <div class="progress"><span class="progress_item_start main_font">01</span>
+                <div class="progress-line">
+                  <div class="progress-line_animated"></div>
+                </div><span class="progress_item_end main_font">02</span>
+              </div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" data-slide="1" data-heading="Страховка">
+                  <h4 class="headings_font">- Предлагаем архивацию сообщений.</h4>
+                  <p class="main_font">Очень удобный в использовании и чтении архив сообщений, который предоставляется в качестве дополнительной услуги</p>
+                </div>
+                <div class="swiper-slide" data-slide="2" data-heading="Честность">
+                  <h4 class="headings_font">- Предлагаем архивацию сообщений.</h4>
+                  <p class="main_font">Очень удобный в использовании и чтении архив сообщений, который предоставляется в качестве дополнительной услуги</p>
+                </div>
+                <div class="swiper-slide" data-slide="3" data-heading="Анонимность">
+                  <h4 class="headings_font">- Предлагаем архивацию сообщений.</h4>
+                  <p class="main_font">Очень удобный в использовании и чтении архив сообщений, который предоставляется в качестве дополнительной услуги</p>
+                </div>
+                <div class="swiper-slide" data-slide="4" data-heading="Опыт">
+                  <h4 class="headings_font">- Предлагаем архивацию сообщений.</h4>
+                  <p class="main_font">Очень удобный в использовании и чтении архив сообщений, который предоставляется в качестве дополнительной услуги</p>
+                </div>
+              </div>
+            </div>
+            <div class="second_section-content-right">
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+      </div>
     </section>
     <script src="static//js//libs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="static//js//main.js"></script>
   </body>
 </html>

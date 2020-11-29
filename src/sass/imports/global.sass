@@ -4,6 +4,29 @@
 .main_width
     width: calc( 100% - 10.4166666667vh )
 
+.main_padding
+    padding: 0px calculateWidth(183);
+
+.button
+    padding: calculateHeight(24) calculateWidth(30)
+    margin: calculateHeight(45) auto;
+    background: $blue
+    border-radius: 10px
+    color: $white;
+    transition: background-color .3s
+    &:hover
+        background: $dark;
+
+.section
+    display: grid
+    grid-template-areas: 'header content'
+    grid-template-columns: calculateWidth(200) 1fr;
+    grid-template-rows: 100vh;
+    table-layout: fixed;
+
+.fp-tableCell
+    display: flex !important;
+
 .active_link
     a 
         color: $blue !important;

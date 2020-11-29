@@ -1,0 +1,56 @@
+.first_section
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,46,51,1) 80%, rgba(9,46,51,1) 100%);
+    &-content
+        width: 100%;
+        grid-area: content;
+        display: grid;
+        grid-template-columns: repeat( 3, 1fr );
+        grid-column-gap: 85px
+        &-block
+            display: flex;
+            flex-direction: column;
+            justify-content: center
+            color: $white
+            position: relative
+            .image_block
+                position: relative
+                img
+                    width: 100%;
+                .button
+                    position: absolute;
+                    width: 60%;
+                    text-align: center
+                    left: 50%;
+                    margin-left: -30%;
+            .arrow_down 
+                position: absolute;
+                width: calculateWidth(50)
+                height: calculateWidth(50)
+                border: 2px solid $blue
+                bottom: 50px
+                left: 50%;
+                margin-left: calculateWidth(-25)
+                border-radius: 10px
+                transition: border-color .3s
+                &:hover
+                    border-color: $white
+                    &::after
+                        border-color: $white
+                &::after
+                    content: ''
+                    position: absolute;
+                    width: 30%;
+                    height: 30%;
+                    border-left: 2px solid $blue
+                    border-bottom: 2px solid $blue
+                    top: 50%;
+                    margin-top: -20%
+                    left: 50%;
+                    margin-left: -15%;
+                    transform: rotate(-45deg)
+                    transition: border-color .3s
+            p 
+                text-align: left;
+                max-width: 50%
+
+@import '../components/header.sass'

@@ -4,10 +4,22 @@ html
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="static\\css\\main.css")
-        link(rel="stylesheet", href="static\\css\\slick.css")
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css")
+
     body
-        section.section.first_section
+        -let pagesAlternative = new Map();
+            -pagesAlternative.set('Главная', '#').set('Услуги', '#').set('Отзывы', '#');
+
+        section.section
             include components/header
-            .first_section-content
+            #fullpage       
+                include sections/first_section
+                include sections/second_section
+
+                    
+
         script(src="static//js//libs.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js")
+        script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
         script(src="static//js//main.js")
