@@ -7,6 +7,12 @@ header.header
                 a(href="#firstPage").menu_font Главная
             li( data-menuanchor="secondPage" )
                 a(href="#secondPage").menu_font Преимущества
+            li( data-menuanchor="thirdPage" )
+                a(href="#thirdPage").menu_font О нас
+            li( data-menuanchor="fourthPage" )
+                a(href="#fourthPage").menu_font Услуги
+                
+
         ul.header__navigation-closed.hidded
             -for (let [key, value] of pagesAlternative){
                 li

@@ -1,0 +1,64 @@
+.third_section
+    background: linear-gradient(90deg, rgba(21,24,44,1) 0%, rgba(9,35,41,1) 80%, rgba(9,46,51,1) 100%);
+    &-content
+        width: 100%;
+        display: grid;
+        grid-template-columns: 40% 60%
+        grid-area: content;
+        color: $white;
+        &-left
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 90%
+            margin: auto
+            p
+                margin-top: 10px
+        &-right
+            display: flex;
+            flex-direction: column;
+            justify-content: center
+            .video_box
+                width: 80%
+                margin: auto
+                display: flex;
+                align-items: center;
+                justify-content: center
+                height: 100%;
+                &-play_btn
+                    width: calculateWidth(108);
+                    height: calculateWidth(108);
+                    border-radius: 50%;
+                    border: 2px solid $blue;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center
+                    &:hover
+                        border: none;
+                        .video_box-play_btn-inner
+                            width: 80%;
+                            height: 80%;
+                    &-inner
+                        border-radius: inherit
+                        width: 50%;
+                        height: 50%;
+                        background-color: $blue
+                        transition: width .5s, height .5s
+                        position: relative
+                        &::after
+                            position: absolute
+                            top: 50%;
+                            margin-top: -12px
+                            left: 50%;
+                            margin-left: -6px
+                            content: '';
+                            width: 0; 
+                            height: 0; 
+                            border-top: 12px solid transparent;
+                            border-bottom: 12px solid transparent;
+                            border-left: 15px solid $white;
+            video
+                outline: none
+                width: 80%
+                margin: auto

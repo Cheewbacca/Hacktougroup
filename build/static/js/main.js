@@ -1,7 +1,7 @@
 "use strict";
 
 $(document).ready(function () {
-  var anchors = ['firstPage', 'secondPage'];
+  var anchors = ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'];
 
   function onLeaveHandler() {
     $('.header__navigation-opened').children().removeClass('active_link');
@@ -104,4 +104,10 @@ $(document).ready(function () {
 
   var distance = getDistanceBetweenElements(document.getElementById("dot-1"), document.getElementById("dot-2"));
   $('.swiper-pagination').children().append('<style>span:before{height:' + (distance - 85) + 'px }</style>');
+  var play = $('#play');
+  play.on('click', function () {
+    $(this).parent().remove();
+    $(this).fadeOut();
+    $('#video').removeClass('hidded').fadeIn();
+  });
 });

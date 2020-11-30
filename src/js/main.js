@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
 
-    const anchors = ['firstPage', 'secondPage'];
+    const anchors = ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'];
 
     function onLeaveHandler(){
         $('.header__navigation-opened').children().removeClass('active_link');
@@ -113,5 +113,13 @@ $(document).ready(function() {
     );
 
     $('.swiper-pagination').children().append('<style>span:before{height:' + (distance - 85) + 'px }</style>');
+
+    const play = $('#play');
+
+    play.on('click', function(){
+        $(this).parent().remove();
+        $(this).fadeOut();
+        $('#video').removeClass('hidded').fadeIn();
+    });
 
 });

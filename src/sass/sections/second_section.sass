@@ -1,0 +1,106 @@
+.second_section
+    background: linear-gradient(90deg, rgba(10,32,39,1) 0%, rgba(19,25,67,1) 100%);
+    &-content
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat( 2, 50%);
+        grid-area: content;
+        &-left
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 90%
+            margin: auto
+            .progress
+                display: flex;
+                margin: 10px 0
+                align-items: center
+                span 
+                    color: $blue
+                .progress-line
+                    width: calculateWidth(300)
+                    height: 1px
+                    background: $darkGray
+                    margin: 0px 5px
+                    position: relative
+                    .progress-line_animated
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        width: 0;
+                        background-color: $blue;
+            .swiper-wrapper
+                width: 100%                        
+                .swiper-slide
+                    color: $white
+                    p
+                        margin-top: 15px
+                        width: 50%
+        &-right
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .swiper-pagination
+                position: static;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start
+                height: 50vh;
+                justify-content: space-between
+                .line
+                    width: 1px;
+                    background: $darkGray;
+                    z-index: -1;
+                span 
+                    width: calculateWidth(85)
+                    height: calculateWidth(85)
+                    background: transparent
+                    outline: none
+                    position: relative
+                    z-index: 99
+                    &::after
+                        position: absolute;
+                        width: calculateWidth(50)
+                        height: calculateWidth(50)
+                        background-color: $darkGray;
+                        color: $white;
+                        display: flex
+                        align-items: center;
+                        justify-content: center
+                        content: attr(data-index);
+                        border-radius: 50%;
+                        top: 50%;
+                        margin-top: calculateWidth(-25)
+                        left: 50%;
+                        margin-left: calculateWidth(-25)
+                    &::before
+                        content: '';
+                        position: absolute;
+                        bottom: calculateWidth(-42);
+                        width: 2px;
+                        background: $darkGray;
+                        z-index: -1
+
+                    .dots_headings
+                        color: $white;
+                        position: absolute;
+                        left: calculateWidth(100)
+                        top: 50%;
+                        margin-top: calculateWidth(-7)
+                            
+                .swiper-pagination-bullet-active
+                    border: 1px solid $blue;
+                    &::after
+                        background-color: $blue;
+                
+                .disabled-line
+                    &::before
+                        height: 0 !important; 
+                
+                .before_active
+                    opacity: 1
+                    &::after
+                        background-color: $blue; 
+                    &::before
+                        background: $blue !important;
