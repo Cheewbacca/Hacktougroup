@@ -4,68 +4,53 @@
 @import 'imports/fonts.sass'
 @import 'imports/global.sass'
 
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) 
+  // For Google Chrome
+  &::-webkit-scrollbar 
+    width:  $size;
+    height: $size;
+  
+
+  &::-webkit-scrollbar-thumb 
+    background: $foreground-color;
+  
+
+  &::-webkit-scrollbar-track 
+    background: $background-color;
+  
+  // For Internet Explorer
+  & 
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+
 body
     @import 'sections/first_section'
     @import 'sections/second_section'
     @import 'sections/third_section' 
-    .fourth_section
+    @import 'sections/fourth_section' 
+    .fives_section
         background: linear-gradient(90deg, rgba(21,24,44,1) 0%, rgba(9,35,41,1) 80%, rgba(9,46,51,1) 100%);
         &-content
-            width: 100%;
-            display: grid;
-            grid-template-columns: 40% 60%
-            grid-area: content;
-            color: $white;
-            &-left
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-                .blue_font_second
-                    margin-left: 40px
-                    color: $white
-                    position: relative
-                    &::before
-                       position: absolute 
-                       height: 100%;
-                       width: 1px;
-                       background: $blue;
-                       content: '';
-                       left: -20px
-                .services
-                    margin-top: calculateHeight(80)
-                    width: 100%;
-                    display: grid;
-                    grid-template-columns: repeat( 2, 1fr );
-                    grid-template-rows: repeat( 2, 1fr );
-                    &-pl
-                        padding-left: calculateWidth(60)
-                    &-pt
-                        padding-top: calculateWidth(60)
-                    &-pr
-                        padding-right: calculateWidth(60)
-                        border-right: 1px solid $border
-                    &-pb
-                        padding-bottom: calculateWidth(60)
-                        border-bottom: 1px solid $border
-                        border-opacity: 0.1
-                    .price
-                        padding: 15px 0
-                        display: flex;
-                        align-items: center;
-                        border-bottom: 2px solid $white;
-                        span 
-                            margin-left: 10px
-
-                    .order
-                        margin-top: 15px;
-                        display: flex;
-                        align-items: center;
-                        padding: 15px 22px
-                        width: 100%;
-                        border: 1px solid $blue
-                        svg
-                            border: 1px solid $blue
-                            height: 100%;
+            display: flex;
+            justify-content: center
+            flex-direction: column
+            color: $white
+            h3 
+                margin-top: calculateHeight(25)
+            .articles
+                max-width: 70%
+                overflow-x: scroll
+                margin-top: calculateHeight(52)
+                display: grid;
+                grid-template-columns: repeat( 5, 45% )
+                grid-row-gap: calculateHeight(50)
+                grid-column-gap: calculateWidth(60)
+                padding-bottom: calculateHeight(60)
+                @include scrollbars(.5em, $blue, $gray);
+                .article 
+                    padding-left: calculateWidth(38)
+                    border-left: 1px solid $gray;
+                    p 
+                        color: $gray
                             
 

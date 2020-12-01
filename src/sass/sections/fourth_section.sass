@@ -1,0 +1,115 @@
+.fourth_section
+    background: linear-gradient(90deg, rgba(21,24,44,1) 0%, rgba(9,35,41,1) 80%, rgba(9,46,51,1) 100%);
+    &-content
+        width: 100%;
+        display: grid;
+        grid-template-columns: 40% 60%
+        grid-area: content;
+        color: $white;
+        &-left
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            .blue_font_second
+                margin-left: 40px
+                color: $white
+                position: relative
+                &::before
+                    position: absolute 
+                    height: 100%;
+                    width: 1px;
+                    background: $blue;
+                    content: '';
+                    left: -20px
+            .services
+                margin-top: calculateHeight(80)
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat( 2, 1fr );
+                grid-template-rows: repeat( 2, 1fr );
+                &-item
+                    opacity: 0.2
+                    transition: opacity .3s
+                    &:hover
+                        opacity: 1
+                &-pl
+                    padding-left: calculateWidth(60)
+                &-pt
+                    padding-top: calculateWidth(60)
+                &-pr
+                    padding-right: calculateWidth(60)
+                    border-right: 1px solid $border
+                &-pb
+                    padding-bottom: calculateWidth(60)
+                    border-bottom: 1px solid $border
+                    border-opacity: 0.1
+                .price
+                    padding: 15px 0
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 2px solid $white;
+                    span 
+                        margin-left: 10px
+
+                .order
+                    margin-top: 15px;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    border: 1px solid $blue
+                    border-radius: 10px
+                    &-truck
+                        display: flex;
+                        height: 100%;
+                        align-items: center;
+                        justify-content: center;
+                        width: calculateWidth(60)
+                        border: 1px solid $blue
+                        padding: 16px 0px
+                        border-radius: 10px
+                        svg
+                            height: 100%;
+                            width: calculateWidth(24)
+                    span 
+                        margin: 0 auto
+                        padding: 15px 0;
+                        color: $blue
+
+        &-right
+            display: flex;
+            flex-direction: column;
+            justify-content: center
+            .another_box
+                width: 80%
+                margin: auto
+                display: flex;
+                align-items: center;
+                justify-content: center
+                height: 100%;
+                &-content
+                    width: calculateWidth(108);
+                    height: calculateWidth(108);
+                    border-radius: 50%;
+                    border: 2px solid $blue;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center
+                    &:hover
+                        border: none;
+                        .another_box-content-inner
+                            width: 80%;
+                            height: 80%;
+                    &-inner
+                        border-radius: inherit
+                        width: 50%;
+                        height: 50%;
+                        background-color: $blue
+                        transition: width .5s, height .5s
+                        position: relative
+                        display: flex;
+                        align-items: center;
+                        justify-content: center
+                        svg 
+                            width: calculateWidth(22)
