@@ -30,6 +30,23 @@
     grid-template-rows: 100vh;
     table-layout: fixed;
 
+.underline
+    position: relative;
+    &_white
+        &::after
+            background-color: $white !important
+    &_blue
+        &::after
+            background-color: $blue !important
+    &::after
+        position: absolute;
+        width: 100%;
+        content: '';
+        height: 1px; 
+        background-color: inherit;
+        left: 0;
+        bottom: -5px
+
 .fp-tableCell
     display: flex !important;
 

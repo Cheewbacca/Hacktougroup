@@ -28,29 +28,69 @@ body
     @import 'sections/second_section'
     @import 'sections/third_section' 
     @import 'sections/fourth_section' 
-    .fives_section
-        background: linear-gradient(90deg, rgba(21,24,44,1) 0%, rgba(9,35,41,1) 80%, rgba(9,46,51,1) 100%);
-        &-content
+    @import 'sections/fives_section'
+    .section
+      &_wrapper
+        display: grid;
+        grid-template-rows: 70% 30%;
+        grid-template-columns: 100%;
+        grid-gap: 0px
+        width: 100%;
+        .last_section
+          &-content
+            background: linear-gradient(90deg, rgba(21,24,44,1) 0%, rgba(9,35,41,1) 80%, rgba(9,46,51,1) 100%);
             display: flex;
-            justify-content: center
+            justify-content: center;
             flex-direction: column
-            color: $white
-            h3 
-                margin-top: calculateHeight(25)
-            .articles
-                max-width: 70%
-                overflow-x: scroll
-                margin-top: calculateHeight(52)
+            .partners
+              max-width: 70%
+              margin-top: calculateHeight(70)
+              &__content
+                width: 100%;
                 display: grid;
-                grid-template-columns: repeat( 5, 45% )
-                grid-row-gap: calculateHeight(50)
-                grid-column-gap: calculateWidth(60)
-                padding-bottom: calculateHeight(60)
-                @include scrollbars(.5em, $blue, $gray);
-                .article 
-                    padding-left: calculateWidth(38)
-                    border-left: 1px solid $gray;
-                    p 
-                        color: $gray
-                            
-
+                grid-template-columns: repeat( 4, 1fr )
+                grid-row-gap: calculateHeight(75)
+                a
+                  display: inline-table
+                  opacity: .3
+                  transition: opacity .3s
+                  &:hover
+                    opacity: 1
+                  img 
+                    object-fit: cover
+        .footer
+          background: $dark2
+          height: 100%;
+          &_content
+            display: grid;
+            grid-template-columns: repeat( 4, 1fr )
+            padding-top: calculateHeight(67)
+            &-column
+              display: flex;
+              flex-direction: column;
+              color: $white
+              .header__navigation-social
+                margin-top: 15px
+              ul 
+                margin-top: calculateHeight(30)
+              .contact_list  
+                li
+                  width: 100%;
+                  margin-bottom: 30px
+                  a 
+                    display: flex;
+                    align-items: center;
+                    span 
+                      margin-left: calculateWidth(20)   
+              .payment
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+                li 
+                  margin-right: 15px     
+              a 
+                color: $white;
+            .author
+                justify-content: flex-end
+                align-items: flex-end        
+            

@@ -1,0 +1,24 @@
+.fives_section
+    background: linear-gradient(90deg, rgba(21,24,44,1) 0%, rgba(9,35,41,1) 80%, rgba(9,46,51,1) 100%);
+    &-content
+        display: flex;
+        justify-content: center
+        flex-direction: column
+        color: $white
+        h3 
+            margin-top: calculateHeight(25)
+        .articles
+            max-width: 70%
+            overflow-x: scroll
+            margin-top: calculateHeight(52)
+            display: grid;
+            grid-template-columns: repeat( 5, 45% )
+            grid-row-gap: calculateHeight(50)
+            grid-column-gap: calculateWidth(60)
+            padding-bottom: calculateHeight(60)
+            @include scrollbars(.5em, $blue, $gray);
+            .article 
+                padding-left: calculateWidth(38)
+                border-left: 1px solid $gray;
+                p 
+                    color: $gray

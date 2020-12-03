@@ -15,39 +15,65 @@ html
             include components/header
             #fullpage       
                 // TODO: normal global classes for section left/right
+
                 include sections/first_section
                 include sections/second_section
                 include sections/third_section
                 include sections/fourth_section
-                section.section.fives_section
-                    .fives_section-content.main_padding
-                        h2.blue_font Статьи 
-                        h3.headings_font Статьи, которые интересно будет Вам прочитать
-                        .articles
-                            .article
-                                h4.subtitle_font Что такое "архив сообщений" и зачем он нужен?
-                                p.small_font_regular В этой статье Вы найдете детальное описания всех плюсов услуги выполнения "архива сообщений"
-                            .article
-                                h4.subtitle_font Что такое "архив сообщений" и зачем он нужен?
-                                p.small_font_regular В этой статье Вы найдете детальное описания всех плюсов услуги выполнения "архива сообщений"
-                            .article
-                                h4.subtitle_font Что такое "архив сообщений" и зачем он нужен?
-                                p.small_font_regular В этой статье Вы найдете детальное описания всех плюсов услуги выполнения "архива сообщений"
-                            .article
-                                h4.subtitle_font Что такое "архив сообщений" и зачем он нужен?
-                                p.small_font_regular В этой статье Вы найдете детальное описания всех плюсов услуги выполнения "архива сообщений"
-                            .article
-                                h4.subtitle_font Что такое "архив сообщений" и зачем он нужен?
-                                p.small_font_regular В этой статье Вы найдете детальное описания всех плюсов услуги выполнения "архива сообщений"
-                            .article
-                                h4.subtitle_font Что такое "архив сообщений" и зачем он нужен?
-                                p.small_font_regular В этой статье Вы найдете детальное описания всех плюсов услуги выполнения "архива сообщений"
-                            .article
-                                h4.subtitle_font Что такое "архив сообщений" и зачем он нужен?
-                                p.small_font_regular В этой статье Вы найдете детальное описания всех плюсов услуги выполнения "архива сообщений"
-                            .article
-                                h4.subtitle_font Что такое "архив сообщений" и зачем он нужен?
-                                p.small_font_regular В этой статье Вы найдете детальное описания всех плюсов услуги выполнения "архива сообщений"
+                include sections/fives_section
+                section.section.last_section
+                    .section_wrapper
+                        .last_section-content.main_padding
+                            h2.blue_font Предоставляем услуги для: 
+                            .partners
+                                .partners__content
+                                    a(href="#")
+                                        img(src="static/img/svg/darkmoney.svg", alt="")
+                                    a(href="#")
+                                        img(src="static/img/svg/darkmarket-removebg-preview.svg", alt="")
+                                    a(href="#")
+                                        img(src="static/img/svg/darkmoney.svg", alt="")
+                                    a(href="#")
+                                        img(src="static/img/svg/darkmoney.svg", alt="")
+                                    a(href="#")
+                                        img(src="static/img/svg/darkmoney.svg", alt="")
+                                    a(href="#")
+                                        img(src="static/img/svg/darkmoney.svg", alt="")
+                        footer.footer.main_padding   
+                            .footer_content
+                                .footer_content-column
+                                    h3.logo_font-footer Hacktougroup
+                                    .header__navigation-social
+                                        a(href="#")
+                                            include ../../../build/static/img/svg/telegram.svg
+                                        a(href="#")
+                                            include ../../../build/static/img/svg/support.svg
+                                .footer_content-column
+                                    h4.footer_font-headings Контакты
+                                    ul.contact_list 
+                                        li 
+                                            a(href="#")  
+                                                include svg/telegram_white
+                                                span.regular_font @hacktogroup
+                                        li 
+                                            a(href="#")  
+                                                include svg/mail
+                                                span.regular_font freelansband@mail.ru
+                                .footer_content-column
+                                    h4.footer_font-headings Оплата
+                                    ul.payment
+                                        li 
+                                            a(href="#")
+                                                include svg/qiwi
+                                        li
+                                            a(href="#")
+                                                include svg/yandex
+                                        li
+                                            a(href="#")
+                                                include svg/bitcoin
+                                .footer_content-column.author
+                                    h4.regular_font.underline.underline_white Designe by Vovk
+
                             
                             
 

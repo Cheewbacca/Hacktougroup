@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
 
-    const anchors = ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fivesPage'];
+    const anchors = ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fivesPage', 'lastPage'];
 
     function onLeaveHandler(){
         $('.header__navigation-opened').children().removeClass('active_link');
