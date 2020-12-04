@@ -12,11 +12,14 @@ $(document).ready(function () {
     });
   }
 
-  $('#fullpage').fullpage({
-    anchors: anchors,
-    slideSelector: '.page_slide',
-    afterLoad: onLeaveHandler
-  });
+  if ($(window).width > 768) {
+    $('#fullpage').fullpage({
+      anchors: anchors,
+      slideSelector: '.page_slide',
+      afterLoad: onLeaveHandler
+    });
+  }
+
   var burger = $('.burger');
   burger.on('click', function () {
     burger.toggleClass('closed');
