@@ -1,0 +1,35 @@
+.footer
+          background: $dark2
+          height: 100%;
+          &_content
+            display: grid;
+            grid-template-columns: repeat( 4, 1fr )
+            padding-top: calculateHeight(67)
+            &-column
+              display: flex;
+              flex-direction: column;
+              color: $white
+              .header__navigation-social
+                margin-top: 15px
+              ul 
+                margin-top: calculateHeight(30)
+              .contact_list  
+                li
+                  width: 100%;
+                  margin-bottom: 30px
+                  a 
+                    display: flex;
+                    align-items: center;
+                    span 
+                      margin-left: calculateWidth(20)   
+              .payment
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+                li 
+                  margin-right: 15px     
+              a 
+                color: $white;
+            .author
+                justify-content: flex-end
+                align-items: flex-end   

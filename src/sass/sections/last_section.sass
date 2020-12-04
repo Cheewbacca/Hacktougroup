@@ -1,0 +1,29 @@
+.last_section
+    .section_wrapper
+        display: grid;
+        grid-template-rows: 70% 30%;
+        grid-template-columns: 100%;
+        grid-gap: 0px
+        width: 100%;
+        .last_section-content
+            background: linear-gradient(90deg, rgba(21,24,44,1) 0%, rgba(9,35,41,1) 80%, rgba(9,46,51,1) 100%);
+            display: flex;
+            justify-content: center;
+            flex-direction: column
+            .partners
+                max-width: 70%
+                margin-top: calculateHeight(70)
+                &__content
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat( 4, 1fr )
+                    grid-row-gap: calculateHeight(75)
+                    a
+                        display: inline-table
+                        opacity: .3
+                        transition: opacity .3s
+                        &:hover
+                        opacity: 1
+                        img 
+                        object-fit: cover
+        @import '../components/footer'
