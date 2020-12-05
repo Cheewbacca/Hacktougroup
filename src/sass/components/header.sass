@@ -15,6 +15,7 @@
         margin: calculateHeight(35) auto calculateHeight(75)
         position: relative
         cursor: pointer
+        z-index: 999999999999999999
         @media screen and ( max-width: 768px )
             margin: initial
             width: tW(32)
@@ -74,8 +75,18 @@
             width: 40%
             height: 2px;  
     &__navigation 
-        @media screen and ( max-width: 768px )
-            display: none
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        right: 0
+        background: $dark2;
+        height: 100%;
+        z-index: 9999999;
+        display: flex
+        align-items: center;
+        justify-content: center;
+        transform: translate(-200%)
+        transition: transform .3s
         ul 
             li 
                 margin-bottom: calculateHeight(35)
@@ -85,7 +96,20 @@
                 a 
                     color: $darkGray
                     transition: color .3s
+        &-opened
+            @media screen and ( max-width: 768px )
+                display: none
         &-closed
+            @media screen and ( max-width: 768px )
+                display: flex;
+                flex-direction: column;
+                li 
+                    .header__navigation-social
+                        a 
+                            margin: 0 4px
+                            svg 
+                                width: 32px
+                                height: 32px
             li 
                 &:hover
                     a 
@@ -99,3 +123,5 @@
                     margin-right: 12px
                 svg 
                     width: calculateWidth(33)
+    .transformed
+        transform: translate(0)

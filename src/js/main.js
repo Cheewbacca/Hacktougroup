@@ -23,11 +23,18 @@ $(document).ready(function() {
 
     const burger = $('.burger');
 
-    burger.on('click',  function(){
-        burger.toggleClass('closed');
-        $('.header__navigation-opened').toggleClass('hidded');
-        $('.header__navigation-closed').toggleClass('hidded');
-    });
+    if ($(window).width() > 768){
+        burger.on('click',  function(){
+            burger.toggleClass('closed');
+            $('.header__navigation-opened').toggleClass('hidded');
+            $('.header__navigation-closed').toggleClass('hidded');
+        });
+    }else {
+        burger.on('click', function(){
+            burger.toggleClass('closed');
+            $('.header__navigation').toggleClass('transformed');
+        });  
+    }
 
     $('.arrow_down ').on('click', function(e){
         e.preventDefault();
@@ -123,5 +130,4 @@ $(document).ready(function() {
         $(this).fadeOut();
         $('#video').removeClass('hidded').fadeIn();
     });
-
 });

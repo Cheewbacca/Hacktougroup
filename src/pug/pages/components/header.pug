@@ -19,7 +19,7 @@ header.header
 
         ul.header__navigation-closed.hidded
             -for (let [key, value] of pagesAlternative){
-                li
+                li.active_link
                     a(href="" + value).menu_font= key
             -}
             li 
