@@ -1,6 +1,19 @@
 "use strict";
 
 $(document).ready(function () {
+  document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      try {
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      } catch (e) {
+        console.error("Can't find element", e);
+      }
+    });
+  });
   var anchors = ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fivesPage', 'lastPage'];
 
   function onLeaveHandler() {
@@ -28,6 +41,14 @@ $(document).ready(function () {
       $('.header__navigation-opened').toggleClass('hidded');
       $('.header__navigation-closed').toggleClass('hidded');
     });
+    $('.arrow_down ').on('click', function (e) {
+      e.preventDefault();
+      fullpage_api.moveSectionDown();
+    });
+    $('.goTofooter').on('click', function (e) {
+      e.preventDefault();
+      fullpage_api.moveTo(6);
+    });
   } else {
     burger.on('click', function () {
       burger.toggleClass('closed');
@@ -35,10 +56,6 @@ $(document).ready(function () {
     });
   }
 
-  $('.arrow_down ').on('click', function (e) {
-    e.preventDefault();
-    fullpage_api.moveSectionDown();
-  });
   var mySwiper = new Swiper('.swiper-container', {
     loop: true,
     slidesPerView: 1,

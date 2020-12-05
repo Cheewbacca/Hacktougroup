@@ -75,18 +75,19 @@
             width: 40%
             height: 2px;  
     &__navigation 
-        position: fixed;
-        width: 100%;
-        top: 0px;
-        right: 0
-        background: $dark2;
-        height: 100%;
-        z-index: 9999999;
-        display: flex
-        align-items: center;
-        justify-content: center;
-        transform: translate(-200%)
-        transition: transform .3s
+        @media screen and ( max-width: 768px )
+            position: fixed;
+            width: 100%;
+            top: 0px;
+            right: 0
+            background: $dark2;
+            height: 100%;
+            z-index: 9999999;
+            display: flex
+            align-items: center;
+            justify-content: center;
+            transform: translate(-200%)
+            transition: transform .3s
         ul 
             li 
                 margin-bottom: calculateHeight(35)
