@@ -6,6 +6,8 @@
 
 .main_padding
     padding: 0px calculateWidth(183);
+    @media screen and ( max-width: 500px )
+        padding: 0 25px
 
 .hidded
     display: none;
@@ -16,12 +18,17 @@
 .button
     padding: calculateHeight(24) calculateWidth(30)
     margin: calculateHeight(45) auto;
-    background: $blue
+    background: transparent;
+    border: 2px solid $blue;
     border-radius: 10px
     color: $white;
     transition: background-color .3s
     &:hover
         background: $dark;
+    @media screen and ( max-width: 768px )
+        padding: tH(19) tW(30)
+    @media screen and ( max-width: 768px )
+        padding: 19px 30px
 
 .section
     display: grid
@@ -29,6 +36,8 @@
     grid-template-columns: calculateWidth(200) 1fr;
     grid-template-rows: 100vh;
     table-layout: fixed;
+    @media screen and ( max-width: 768px )
+        display: block;
 
 .underline
     position: relative;

@@ -1,16 +1,29 @@
 .second_section
     background: linear-gradient(90deg, rgba(10,32,39,1) 0%, rgba(19,25,67,1) 100%);
+    @media screen and ( max-width: 768px )
+        background: linear-gradient(90deg, rgba(21,24,44,1) 0%, rgba(9,35,41,1) 80%, rgba(9,44,49,1) 98%, rgba(9,46,51,1) 100%);
     &-content
         width: 100%;
         display: grid;
         grid-template-columns: repeat( 2, 50%);
         grid-area: content;
+        @media screen and ( max-width: 768px )
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: calculateHeight(57)
+            padding-bottom: calculateHeight(57)
         &-left
             display: flex;
             flex-direction: column;
             justify-content: center;
             max-width: 90%
             margin: auto
+            @media screen and ( max-width: 768px )
+                max-width: 100%;
+            h2 
+                @media screen and ( max-width: 768px )
+                    text-align: center
             .progress
                 display: flex;
                 margin: 10px 0
@@ -23,6 +36,8 @@
                     background: $darkGray
                     margin: 0px 5px
                     position: relative
+                    @media screen and ( max-width: 768px )
+                        width: 100%;
                     .progress-line_animated
                         position: absolute;
                         left: 0;
@@ -34,13 +49,23 @@
                 width: 100%                        
                 .swiper-slide
                     color: $white
+                    h4 
+                        @media screen and ( max-width: 500px )
+                            text-align: center
                     p
                         margin-top: 15px
                         width: 50%
+                        @media screen and ( max-width: 768px )
+                            width: 100%;
+                        @media screen and ( max-width: 500px )
+                            text-align: center
         &-right
             display: flex;
             flex-direction: column;
             justify-content: center;
+            @media screen and ( max-width: 768px )
+                flex-direction: row
+                width: 100%;
             .swiper-pagination
                 position: static;
                 display: flex;
@@ -48,17 +73,30 @@
                 align-items: flex-start
                 height: 50vh;
                 justify-content: space-between
+                @media screen and ( max-width: 768px )
+                    flex-direction: row
+                    height: auto
+                    width: 100%;
+                    margin-top: 10px
                 .line
                     width: 1px;
                     background: $darkGray;
                     z-index: -1;
+                    @media screen and ( max-width: 768px )
+                        width: 3px
                 span 
                     width: calculateWidth(85)
                     height: calculateWidth(85)
                     background: transparent
                     outline: none
                     position: relative
-                    z-index: 99
+                    z-index: 999
+                    @media screen and ( max-width: 768px )
+                        width: tW(85)
+                        height: tW(85)
+                    @media screen and ( max-width: 500px )
+                        width: 64px
+                        height: 64px
                     &::after
                         position: absolute;
                         width: calculateWidth(50)
@@ -74,6 +112,16 @@
                         margin-top: calculateWidth(-25)
                         left: 50%;
                         margin-left: calculateWidth(-25)
+                        @media screen and ( max-width: 768px )
+                            width: tW(50)
+                            height: tW(50)
+                            margin-top: tW(-25)
+                            margin-left: tW(-25)
+                        @media screen and ( max-width: 500px )
+                            width: 42px
+                            height: 42px
+                            margin-top: -21px;
+                            margin-left: -21px
                     &::before
                         content: '';
                         position: absolute;
@@ -81,13 +129,21 @@
                         width: 2px;
                         background: $darkGray;
                         z-index: -1
-
+                        @media screen and ( max-width: 768px )
+                            width: 100%;
+                            height: 2px;
+                            bottom: initial;
+                            top: 50%;
+                            margin-top: -1px
+                            right: tW(-85)
                     .dots_headings
                         color: $white;
                         position: absolute;
                         left: calculateWidth(100)
                         top: 50%;
                         margin-top: calculateWidth(-7)
+                        @media screen and ( max-width: 768px )
+                            display: none;
                             
                 .swiper-pagination-bullet-active
                     border: 1px solid $blue;

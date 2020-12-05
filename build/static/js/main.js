@@ -12,7 +12,7 @@ $(document).ready(function () {
     });
   }
 
-  if ($(window).width > 768) {
+  if ($(window).width() > 768) {
     $('#fullpage').fullpage({
       anchors: anchors,
       slideSelector: '.page_slide',

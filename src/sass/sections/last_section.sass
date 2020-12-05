@@ -1,23 +1,42 @@
 .last_section
+    @media screen and ( max-width: 768px )
+        background: linear-gradient(90deg, rgba(21,24,44,1) 0%, rgba(9,35,41,1) 80%, rgba(9,46,51,1) 100%);
     .section_wrapper
         display: grid;
         grid-template-rows: 70% 30%;
         grid-template-columns: 100%;
         grid-gap: 0px
         width: 100%;
+        @media screen and ( max-width: 768px )
+            display: flex;
+            flex-wrap: wrap
+            background: linear-gradient(90deg, rgba(21,24,44,1) 0%, rgba(9,35,41,1) 80%, rgba(9,46,51,1) 100%);
         .last_section-content
             background: linear-gradient(90deg, rgba(21,24,44,1) 0%, rgba(9,35,41,1) 80%, rgba(9,46,51,1) 100%);
             display: flex;
             justify-content: center;
             flex-direction: column
+            @media screen and ( max-width: 768px )
+                padding-top: tH(57);
+                padding-bottom: tH(57);
+                background: initial
+            h2 
+                @media screen and ( max-width: 768px )
+                    text-align: center
             .partners
                 max-width: 70%
                 margin-top: calculateHeight(70)
+                @media screen and ( max-width: 768px )
+                    max-width: initial
                 &__content
                     width: 100%;
                     display: grid;
                     grid-template-columns: repeat( 4, 1fr )
                     grid-row-gap: calculateHeight(75)
+                    @media screen and ( max-width: 768px )
+                        grid-column-gap: tW(25)
+                    @media screen and ( max-width: 500px )
+                        grid-template-columns: repeat( 2, 1fr )
                     a
                         display: inline-table
                         opacity: .3

@@ -5,8 +5,14 @@
         justify-content: center
         flex-direction: column
         color: $white
+        @media screen and ( max-width: 768px )
+            padding: th(57) 0;
+        h2 
+            text-align: center
         h3 
             margin-top: calculateHeight(25)
+            @media screen and ( max-width: 500px )
+                text-align: center
         .articles
             max-width: 70%
             overflow-x: scroll
@@ -17,6 +23,9 @@
             grid-column-gap: calculateWidth(60)
             padding-bottom: calculateHeight(60)
             @include scrollbars(.5em, $blue, $gray);
+            @media screen and ( max-width: 768px )
+                max-width: 100%;
+                grid-template-columns: repeat( 5, 100% )
             .article 
                 padding-left: calculateWidth(38)
                 border-left: 1px solid $gray;

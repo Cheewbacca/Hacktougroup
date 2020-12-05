@@ -6,14 +6,26 @@
         grid-template-columns: 40% 60%
         grid-area: content;
         color: $white;
+        @media screen and ( max-width: 768px )
+            grid-template-columns: 100%
+            padding: tH(57) 0
+        h2 
+            text-align: center;
+            @media screen and ( max-width: 500px )
+                margin-bottom: 33px
         &-left
             display: flex;
             flex-direction: column;
             justify-content: center;
             max-width: 90%
             margin: auto
+            h3
+                @media screen and ( max-width: 500px )
+                    text-align: center;
             p
                 margin-top: 10px
+                @media screen and ( max-width: 500px )
+                    text-align: center;
         &-right
             display: flex;
             flex-direction: column;
@@ -25,6 +37,8 @@
                 align-items: center;
                 justify-content: center
                 height: 100%;
+                @media screen and ( max-width: 768px )
+                    width: 100%;
                 &-play_btn
                     width: calculateWidth(108);
                     height: calculateWidth(108);
@@ -34,6 +48,13 @@
                     display: flex;
                     align-items: center;
                     justify-content: center
+                    @media screen and ( max-width: 768px )
+                        margin: tH(37) 0
+                        width: tW(108);
+                        height: tW(108);
+                    @media screen and ( max-width: 500px )
+                        width: 108px;
+                        height: 108px;
                     &:hover
                         border: none;
                         .video_box-play_btn-inner
@@ -62,3 +83,7 @@
                 outline: none
                 width: 80%
                 margin: auto
+                @media screen and ( max-width: 768px )
+                    width: 90%;
+                    margin: tH(37) auto
+                    
