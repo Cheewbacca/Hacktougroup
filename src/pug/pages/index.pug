@@ -8,10 +8,7 @@ html
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css")
 
     body
-        -let pagesAlternative = new Map();
-            -pagesAlternative.set('Главная', '#').set('Услуги', '#').set('Отзывы', '#');
-
-        section.section
+        section.section 
             include components/header
             #fullpage       
                 include sections/first_section

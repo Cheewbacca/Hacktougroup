@@ -1,0 +1,42 @@
+@import 'imports/reset.sass'
+@import 'imports/functions.sass'
+@import 'imports/colors.sass'
+@import 'imports/fonts.sass'
+@import 'imports/global.sass'
+
+@import 'imports/mixins'
+
+body
+    @import 'components/header.sass'
+    .services
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,46,51,1) 80%, rgba(9,46,51,1) 100%);
+        width: 100%;
+        height: 100vh
+        display: grid;
+        grid-template-columns: 80% 20%;
+        max-width: calc( 100vw - 10.4166666667vw );
+        &__content
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: $white;
+            .all_services
+                .swiper-container
+                    width: 100%
+                    overflow: hidden
+                    margin: initial
+                    margin-top: calculateHeight(75);
+                    .swiper-pagination 
+                        width: 100%;
+                        position: static;
+                        margin-top: calculateHeight(92)
+                        display: flex;
+                        justify-content: space-between
+                        &-bullet
+                            border-radius: initial
+                            width: calculateWidth(150)
+                            background: $gray
+                            &-active
+                                width: calculateWidth(340)
+                                background: $blue
+        &__switcher

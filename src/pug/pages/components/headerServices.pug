@@ -4,8 +4,6 @@ header.header
     nav.header__navigation 
         ul.header__navigation-opened
             -var pages = new Map();
-            -pages.set('Главная', [ 'firstPage', '#firstPage' ]).set('Преимущества', ['secondPage', '#secondPage']).set('О нас', ['thirdPage', '#thirdPage']);
-            -pages.set('Услуги', ['fourthPage', '#fourthPage']).set('Статьи', ['fivesPage', '#fivesPage']).set('Контакты', ['lastPage', '#lastPage']);
             
             -for (let [key, value] of pages){
                 li( data-menuanchor=""+ value[0] )
