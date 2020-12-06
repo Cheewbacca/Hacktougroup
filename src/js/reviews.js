@@ -16,3 +16,12 @@ if ($(window).width() > 768){
         afterLoad: onLeaveHandler
     });
 }
+
+$('#add_comment').on('click', function(e){
+    e.preventDefault();
+    $('#review').fadeIn();
+});
+
+$('#reviewCross').on('click', function(){
+    $('#review').fadeOut();
+});

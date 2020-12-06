@@ -8,5 +8,78 @@
 
 body
     @import 'components/header.sass'
+    #review
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .8)
+        z-index: 99999;
+        display: none
+        @media screen and ( max-width: 768px )
+            top: 0;
+            left: 0;
+        .add_comment__content
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding: calculateWidth(90);
+            padding-right:  calculateWidth(135)
+            background: $form;
+            @media screen and ( max-width: 768px )
+                left: 0;
+            #reviewCross
+                width: calculateWidth(26)
+                height: calculateWidth(26)
+                position: absolute;
+                top: calculateWidth(90);
+                right: calculateWidth(90);
+                cursor: pointer
+                @media screen and ( max-width: 768px )
+                    width: tW(26)
+                    height: tW(26)
+                @media screen and ( max-width: 500px )
+                    width: 26px
+                    height: 26px
+                &::after,
+                &::before
+                    content: '';
+                    position: absolute;
+                    width: 1px;
+                    background: $gray;
+                    height: 100%;
+                    top: 0;
+                    left: 50%;
+                    transform: rotate(45deg)
+                &::before
+                    transform: rotate(-45deg)
+            h3 
+                color: $white
+                margin-top: calculateHeight(15) 
+            form 
+                display: grid;
+                label
+                    margin-top: calculateHeight(55);
+                    color: $white
+                input
+                    color: $white
+                    background: transparent;
+                    border: initial;
+                    border-bottom: 1px solid $gray
+                    outline: none
+                    margin-top: 5px
+                textarea
+                    background: transparent
+                    border: none;
+                    outline: none;
+                    border-bottom: 1px solid $gray
+                    color: $white;
+                button
+                    margin-top: calculateHeight(46)
+                    padding: 12px 24px
+                    background: $blue;
+                    border: none
+                    border-radius: 10px;
+                    outline: none;
+                    color: $white
     @import 'reviews/reviews.sass'
     @import 'sections/last_section'
