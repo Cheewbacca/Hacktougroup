@@ -1,9 +1,16 @@
 .conditions
+    @media screen and ( max-width: 768px )
+        h3,
+        h2
+            text-align: center
     &__content
         margin-top: calculateHeight(50)
         ul 
             display: grid;
             grid-template-columns: repeat( 2, 1fr )
+            @media screen and ( max-width: 768px )
+                grid-template-columns: 1fr
+                grid-row-gap: 80px
             li 
                 display: grid;
                 h4 

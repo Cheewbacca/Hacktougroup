@@ -1,8 +1,16 @@
 .sales
+    @media screen and ( max-width: 768px )
+        h2, 
+        h3,
+        h4 
+            text-align: center
+            margin: 0 auto
     &__content
         margin-top: calculateHeight(30)
         display: grid;
         grid-template-columns: repeat( 2, 1fr )
+        @media screen and ( max-width: 768px )
+            grid-template-columns: 1fr
         h3 
             margin-bottom: calculateHeight(20)
         &-sales
@@ -36,6 +44,9 @@
         &-rules
             border-left: 2px solid $gray
             padding-left: calculateWidth(50)
+            @media screen and ( max-width: 768px )
+                border-left: initial
+                padding-left: initial
             p 
                 &:not(:last-child)
                     margin-bottom: 15px

@@ -15,11 +15,18 @@ body
         display: grid;
         grid-template-columns: 80% 20%;
         max-width: calc( 100vw - 10.4166666667vw );
+        @media screen and ( max-width: 768px )
+            height: 100%;            
+            grid-template-columns: initial
+            max-width: initial
         &__content
             display: flex;
             flex-direction: column;
             justify-content: center;
             color: $white;
+            @media screen and ( max-width: 768px )
+                grid-row: 2
+                padding-bottom: 100px
             @import 'services/all_services'
             @import 'services/conditions'
             @import 'services/sales'
@@ -29,11 +36,26 @@ body
             flex-direction: column;
             align-items: flex-start;
             justify-content: center
+            @media screen and ( max-width: 768px )
+                flex-direction: row
+                align-items: center;
+                justify-content: space-between
             ul 
+                @media screen and ( max-width: 768px )
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%
+                    padding: 58px 18px
                 li
                     margin: calculateHeight(114) 0;
                     display: flex;
                     align-items: center;
+                    @media screen and ( max-width: 768px )
+                        flex-direction: column;
+                        margin: initial
+                        &:nth-child(2)
+                            margin: 0 tW(82 * 2)
                     &:not(:last-child)
                         .state_switcher
                             &::before
@@ -45,6 +67,15 @@ body
                                 left: 50%;
                                 margin-left: -1px;
                                 height: calculateHeight(114)
+                                @media screen and ( max-width: 768px )
+                                    bottom: initial
+                                    height: 2px
+                                    width: tW(82 * 2 + 18)
+                                    right: tW(-82 * 2 - 18)
+                                    left: initial
+                                @media screen and ( max-width: 500px )
+                                    width: calc(41px * 2 )
+                                    right: calc(41px * -2 )
                     .state_switcher
                         width: calculateWidth(50)
                         height: calculateWidth(50)
@@ -56,11 +87,22 @@ body
                         cursor: pointer
                         opacity: .8
                         position: relative
+                        @media screen and ( max-width: 768px )
+                            width: tW(50)
+                            height: tW(50)
+                        @media screen and ( max-width: 500px )
+                            width: 50px
+                            height: 50px
                         svg
                             width: 80%;
                     span 
                         color: $gray;
                         margin-left: calculateWidth(36)
+                        @media screen and ( max-width: 768px )
+                            margin-top: tH(18 + 10)
+                            margin-left: initial
+                        @media screen and ( max-width: 500px )
+                            margin-top: 28px
                 .active
                     .state_switcher
                         background: $blue;
@@ -72,6 +114,12 @@ body
                             height: calculateWidth(86)
                             border: 1px solid $blue;
                             border-radius: 50%;
+                            @media screen and ( max-width: 768px )
+                                width: tW(86)
+                                height: tW(86)
+                            @media screen and ( max-width: 500px )
+                                width: 86px
+                                height: 86px
                     span
                         color: $white;
                         

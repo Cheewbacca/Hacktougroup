@@ -1,16 +1,32 @@
 .all_services
+    @media screen and ( max-width: 768px )
+        text-align: center
     .swiper-container
         width: 100%
         overflow: hidden
         margin: initial
         margin-top: calculateHeight(75);
+        @media screen and ( max-width: 768px )
+            overflow: visible
         .swiper-wrapper
+            @media screen and ( max-width: 768px )
+                display: grid;
+                grid-template-columns: 1fr
             .swiper-slide
                 padding-left: calculateWidth(40)
                 border-left: 1px solid $gray
+                @media screen and ( max-width: 768px )
+                    padding-left: initial
+                    border-left: initial
+                    padding-bottom: tH(50)
+                    border-bottom: 1px solid $gray
+                    margin-bottom: tH(50)
+                    padding-top: tH(50)
                 ul  
                     margin-top: calculateHeight(40)
                     li 
+                        @media screen and ( max-width: 768px )
+                            margin-top: tH(17)
                         span 
                             color: $gray
                             font-style: normal
@@ -27,6 +43,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between
+            @media screen and ( max-width: 768px )
+                display: none
             .swiper-button-next,
             .swiper-button-prev
                 position: relative
