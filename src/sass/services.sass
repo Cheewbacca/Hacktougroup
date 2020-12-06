@@ -56,6 +56,9 @@ body
                         margin: initial
                         &:nth-child(2)
                             margin: 0 tW(82 * 2)
+                    @media screen and ( max-width: 768px )
+                        &:nth-child(2)
+                            margin: 0 tW(50 * 2)
                     &:not(:last-child)
                         .state_switcher
                             &::before

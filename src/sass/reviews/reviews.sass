@@ -7,19 +7,37 @@
     justify-content: center
     color: $white;
     max-width: calc( 100vw - 10.4166666667vw );
+    @media screen and ( max-width: 768px )
+        max-width: initial;
+        height: auto;
+        padding: 50px 0
     h2 
         margin-bottom: calculateHeight(30)
+        @media screen and ( max-width: 768px )
+            text-align: center;
     h3 
         margin-bottom: calculateHeight(20)
+        @media screen and ( max-width: 768px )
+            text-align: center;
     p 
         margin-bottom: calculateHeight(60)
         color: $gray;
         max-width: 50%;
+        @media screen and ( max-width: 768px )
+            text-align: center;
+            margin: 0px auto 30px
+        @media screen and ( max-width: 768px )
+            max-width: 80%
     &__content
         max-width: 80%
         display: flex;
         overflow-x: scroll
         @include scrollbars(.5em, $blue, $gray);
+        @media screen and ( max-width: 768px )
+            max-width: initial
+            flex-direction: column;
+            overflow: visible;
+            padding: 0 25px
         &-item
             margin-right: calculateWidth(100)
             display: grid;
@@ -28,15 +46,31 @@
             width: 50%;
             grid-column-gap: 25px
             padding-bottom: calculateHeight(60)
+            @media screen and ( max-width: 768px )
+                width: 100%;
+                min-width: initial;
+                display: flex;
+                flex-direction: column
+                padding-bottom: 50px;
+                border-bottom: 1px solid $gray
             .img_wrapper
                 grid-row: 1/3
+                @media screen and ( max-width: 768px )
+                    grid-row: initial
+                    margin: 20px auto;
             p 
                 color: $white;
                 max-width: initial
                 margin-bottom: 20px
+                @media screen and ( max-width: 768px )
+                    max-width: 50%;
+                @media screen and ( max-width: 768px )
+                    max-width: initial
             .tags
                 display: inline-flex;
                 flex-wrap: wrap
+                @media screen and ( max-width: 768px )
+                    margin: 0 auto
                 li 
                     margin-right: 15px
     &__new
@@ -45,19 +79,30 @@
         display: flex;
         align-items: center;
         justify-content: space-between
+        @media screen and ( max-width: 768px )
+            flex-direction: column;
+            margin: 50px auto
         p
             margin-bottom: initial
             color: $white;
         a 
             display: flex;
             align-items: center;
-
+            @media screen and ( max-width: 768px )
+                margin-top: 25px
+                flex-direction: column
             .plus
                 width: calculateWidth(56)
                 height: calculateWidth(56)
                 background: $blue;
                 border-radius: 50%
                 position: relative
+                @media screen and ( max-width: 768px )
+                    width: tW(56)
+                    height: tW(56)
+                @media screen and ( max-width: 500px )
+                    width: 56px
+                    height: 56px
                 &::after,
                 &::before
                     position: absolute;
@@ -74,3 +119,6 @@
             span 
                 margin-left: calculateWidth(27)
                 color: $blue
+                @media screen and ( max-width: 768px )
+                    margin-left: initial
+                    margin-top: 15px
