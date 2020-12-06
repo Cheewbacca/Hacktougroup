@@ -4,7 +4,8 @@ header.header
     nav.header__navigation 
         ul.header__navigation-opened
             -var pages = new Map();
-            -pages.set('Услуги', [ 'firstPage', '#firstPage' ]).set('Контакты', ['lastPage', '#lastPage']);
+            -pages.set('Отзывы', [ 'firstPage', '#firstPage' ]).set('Контакты', ['lastPage', '#lastPage']);
+
             -for (let [key, value] of pages){
                 li( data-menuanchor=""+ value[0] )
                     a(href="" + value[1]).menu_font= key

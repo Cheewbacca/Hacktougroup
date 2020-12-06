@@ -1,0 +1,21 @@
+section.section
+    section.services
+        .services__content.main_padding
+            include all_services
+            include conditions
+            include sales
+
+        .services__switcher
+            ul#switcher 
+                li.active( data-target=".all_services" ) 
+                    .state_switcher
+                        include ../svg/switch_state
+                    span.small_font Все услуги
+                li( data-target=".conditions" )  
+                    .state_switcher
+                        include ../svg/switch_state2
+                    span.small_font Условия
+                li( data-target=".sales" )  
+                    .state_switcher
+                        include ../svg/switch_state3
+                    span.small_font Скидки
