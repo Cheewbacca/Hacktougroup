@@ -20,23 +20,59 @@ body
             flex-direction: column;
             justify-content: center;
             color: $white;
-            .all_services
-                .swiper-container
-                    width: 100%
-                    overflow: hidden
-                    margin: initial
-                    margin-top: calculateHeight(75);
-                    .swiper-pagination 
-                        width: 100%;
-                        position: static;
-                        margin-top: calculateHeight(92)
-                        display: flex;
-                        justify-content: space-between
-                        &-bullet
-                            border-radius: initial
-                            width: calculateWidth(150)
-                            background: $gray
-                            &-active
-                                width: calculateWidth(340)
-                                background: $blue
+            @import 'services/all_services'
+            @import 'services/conditions'
+            @import 'services/sales'
+
         &__switcher
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center
+            ul 
+                li
+                    margin: calculateHeight(114) 0;
+                    display: flex;
+                    align-items: center;
+                    &:not(:last-child)
+                        .state_switcher
+                            &::before
+                                content: ''
+                                width: 2px;
+                                background: $gray;
+                                position: absolute;
+                                bottom: calculateHeight(-114);
+                                left: 50%;
+                                margin-left: -1px;
+                                height: calculateHeight(114)
+                    .state_switcher
+                        width: calculateWidth(50)
+                        height: calculateWidth(50)
+                        background: $gray;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer
+                        opacity: .8
+                        position: relative
+                        svg
+                            width: 80%;
+                    span 
+                        color: $gray;
+                        margin-left: calculateWidth(36)
+                .active
+                    .state_switcher
+                        background: $blue;
+                        opacity: 1;
+                        &::after
+                            content: '';
+                            position: absolute;
+                            width: calculateWidth(86)
+                            height: calculateWidth(86)
+                            border: 1px solid $blue;
+                            border-radius: 50%;
+                    span
+                        color: $white;
+                        
+

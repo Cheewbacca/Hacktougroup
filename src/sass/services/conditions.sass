@@ -1,0 +1,21 @@
+.conditions
+    &__content
+        margin-top: calculateHeight(50)
+        ul 
+            display: grid;
+            grid-template-columns: repeat( 2, 1fr )
+            li 
+                display: grid;
+                h4 
+                    margin-bottom: calculateHeight(20)
+                ul 
+                    display: inline-flex
+                    li 
+                        margin-right: 6px
+        .description 
+            margin-top: calculateHeight(30)
+            padding-left: calculateWidth(40)
+            border-left: 1px solid $gray
+
+        .gray_text
+            margin-top: calculateHeight(50)

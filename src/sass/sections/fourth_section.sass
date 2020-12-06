@@ -10,7 +10,9 @@
             grid-template-columns: 100%
             padding: tH(57) 0
         h2 
-            margin: 0 auto
+            @media screen and ( max-width: 768px )
+                text-align: center;
+                margin: 0 auto
         &-left
             display: flex;
             flex-direction: column;

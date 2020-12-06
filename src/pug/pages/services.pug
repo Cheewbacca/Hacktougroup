@@ -13,84 +13,24 @@ html
             #fullpage       
                 section.services
                     .services__content.main_padding
-                        .all_services
-                            h2.blue_font Все услуги
-                            h3.headings_font Наши услуги
-                            .slider.swiper-container
-                                .slider__content.swiper-wrapper
-                                    .slider__content-item.swiper-slide
-                                        h4.services_font Vk.com
-                                        ul 
-                                            li
-                                                span.blue_font (Архив диалогов VK.com)
-                                                .price
-                                                    include svg/coupon 
-                                                    span.subtitle_font от 100$
-                                            li
-                                                span.blue_font (Архив диалогов VK.com)
-                                                .price
-                                                    include svg/coupon 
-                                                    span.subtitle_font от 100$
-                                            li
-                                                span.blue_font (Архив диалогов VK.com)
-                                                .price
-                                                    include svg/coupon 
-                                                    span.subtitle_font от 100$
+                        include services/all_services
+                        include services/conditions
+                        include services/sales
 
-                                        a(href="#").order
-                                            .order-truck
-                                                include svg/truck 
-                                            span.menu_font  Заказать
-
-                                    .slider__content-item.swiper-slide
-                                        h4.services_font Vk.com
-                                        ul 
-                                            li
-                                                span.blue_font (Архив диалогов VK.com)
-                                                .price
-                                                    include svg/coupon 
-                                                    span.subtitle_font от 100$
-
-                                        a(href="#").order
-                                            .order-truck
-                                                include svg/truck 
-                                            span.menu_font  Заказать
-
-                                    .slider__content-item.swiper-slide
-                                        h4.services_font Vk.com
-                                        ul 
-                                            li
-                                                span.blue_font (Архив диалогов VK.com)
-                                                .price
-                                                    include svg/coupon 
-                                                    span.subtitle_font от 100$
-
-                                        a(href="#").order
-                                            .order-truck
-                                                include svg/truck 
-                                            span.menu_font  Заказать
-
-                                    .slider__content-item.swiper-slide
-                                        h4.services_font Vk.com
-                                        ul 
-                                            li
-                                                span.blue_font (Архив диалогов VK.com)
-                                                .price
-                                                    include svg/coupon 
-                                                    span.subtitle_font от 100$
-
-                                        a(href="#").order
-                                            .order-truck
-                                                include svg/truck 
-                                            span.menu_font  Заказать
-
-                                .swiper-button-next
-                                .swiper-pagination 
-                                .swiper-button-prev
-
-                        .conditions
-                        .sales
                     .services__switcher
+                        ul#switcher 
+                            li.active( data-target=".all_services" ) 
+                                .state_switcher
+                                    include svg/switch_state
+                                span.small_font Все услуги
+                            li( data-target=".conditions" )  
+                                .state_switcher
+                                    include svg/switch_state2
+                                span.small_font Условия
+                            li( data-target=".sales" )  
+                                .state_switcher
+                                    include svg/switch_state3
+                                span.small_font Скидки
                         
 
         script(src="static//js//libs.min.js")

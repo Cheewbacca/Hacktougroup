@@ -1,0 +1,71 @@
+.all_services
+    .swiper-container
+        width: 100%
+        overflow: hidden
+        margin: initial
+        margin-top: calculateHeight(75);
+        .swiper-wrapper
+            .swiper-slide
+                padding-left: calculateWidth(40)
+                border-left: 1px solid $gray
+                ul  
+                    margin-top: calculateHeight(40)
+                    li 
+                        span 
+                            color: $gray
+                            font-style: normal
+                        &:last-child
+                            .price 
+                                border-bottom: initial
+                        .price
+                            border-bottom: 1px solid $gray
+                            span 
+                                color: $white;
+        .swiper__controls
+            width: 100%;
+            margin-top: calculateHeight(92)
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+            .swiper-button-next,
+            .swiper-button-prev
+                position: relative
+                right: initial;
+                left: initial;
+                top: initial;
+                bottom: initial
+                width: 35px
+                height: 35px
+                background: $gray;
+                border-radius: 100%
+                margin-top: initial;
+                cursor: pointer
+                &::after
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 12px;
+                    height: 12px;
+                    border-bottom: 2px solid $white;
+                    border-left: 2px solid $white;
+                    transform: rotate(45deg)
+                    margin-left: -3px;
+                    margin-top: -6px;
+            .swiper-button-next
+                &::after
+                    transform: rotate(-135deg)
+                    margin-left: -9px;
+            .swiper-pagination 
+                position: static;
+                display: flex;
+                justify-content: space-between
+                width: 100%;
+                margin: 0 calculateWidth(40)
+                &-bullet
+                    border-radius: initial
+                    width: calculateWidth(150)
+                    background: $gray
+                    &-active
+                        width: calculateWidth(340)
+                        background: $blue

@@ -13,3 +13,14 @@ var mySwiper = new Swiper('.swiper-container', {
     prevEl: '.swiper-button-prev'
   }
 });
+var switcher = $('#switcher').children();
+switcher.each(function (e) {
+  $(this).on('click', function () {
+    switcher.removeClass('active');
+    $(this).addClass('active');
+    switcher.each(function () {
+      $($(this).data('target')).addClass('hidded');
+    });
+    $($(this).data('target')).removeClass('hidded');
+  });
+});

@@ -1,0 +1,41 @@
+.sales
+    &__content
+        margin-top: calculateHeight(30)
+        display: grid;
+        grid-template-columns: repeat( 2, 1fr )
+        h3 
+            margin-bottom: calculateHeight(20)
+        &-sales
+            ul 
+                margin-top: calculateHeight(50)
+                li 
+                    margin-bottom: calculateHeight(40)
+                    display: grid
+                    grid-template-columns: repeat( 3, 1fr )
+                    align-items: center
+                    width: 100%;
+                    .progress_bar
+                        height: 1px
+                        background: $gray;
+                    &:nth-child(1)
+                        .progress_bar
+                            width: 20%;
+                    &:nth-child(2)
+                        .progress_bar
+                            width: 35%;
+                    &:nth-child(3)
+                        .progress_bar
+                            width: 50%;
+                    &:nth-child(4)
+                        .progress_bar
+                            width: 65%;
+
+                    span 
+                        &:last-child
+                            color: $blue
+        &-rules
+            border-left: 2px solid $gray
+            padding-left: calculateWidth(50)
+            p 
+                &:not(:last-child)
+                    margin-bottom: 15px

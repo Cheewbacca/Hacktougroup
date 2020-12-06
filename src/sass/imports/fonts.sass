@@ -129,5 +129,12 @@
         font-size: 22px
 
 
-
-
+.smallest_font
+    font-family: 'Montserrat', sans-serif;
+    font-size: calculateWidth(12)
+    font-weight: 400;
+    color: $dark3
+    @media screen and ( max-width: 768px )
+        font-size: tW(12)
+    @media screen and ( max-width: 500px )
+        font-size: 12px
