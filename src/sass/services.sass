@@ -27,6 +27,136 @@ body
             background: rgba(0, 0, 0, .8);
             width: 100%;
             height: 100%;
+            display: none;
+            align-items: flex-end
+            justify-content: flex-end
+            @media screen and ( max-width: 768px )
+                align-items: center;
+                justify-content: center
+            .order_content
+                padding: calculateHeight(80) calculateWidth(90);
+                background: $form
+                color: $white
+                max-width: 50%;
+                position: relative
+                @media screen and ( max-width: 768px )
+                    max-width: 90%;
+                #order_cross
+                    width: 26px;
+                    height: 26px
+                    position: absolute;
+                    top: calculateHeight(80);
+                    right: 55px;
+                    cursor: pointer
+                    &::after,
+                    &::before
+                        position: absolute;
+                        content: '';
+                        height: 100%;
+                        width: 1px;
+                        background: $white;
+                        transform: rotate(45deg)
+                        top: 0;
+                        left: 50%;
+                        margin-left: -0.5px
+                    &::before
+                        transform: rotate(-45deg)
+
+                h3
+                    margin-top: calculateHeight(50)
+                p 
+                    max-width: 50%
+                    @media screen and ( max-width: 768px )
+                        max-width: initial
+                #order_price
+                    color: $blue
+                    margin: calculateHeight(35) 0 calculateHeight(50);
+                    display: block
+                &-slide
+                    display: grid;
+                    grid-template-columns: repeat( 2, 1fr )
+                    grid-column-gap: 50px
+                    grid-row-gap: 12px
+                    width: 100%;
+                    max-width: 100%;
+                    @media screen and ( max-width: 768px )
+                        grid-template-columns: 1fr
+                        input
+                            &:nth-of-type(1)
+                                grid-row: 2/4
+                    input,
+                    textarea 
+                        width: 100%;
+                        background: transparent
+                        border: initial;
+                        border-bottom: 1px solid $form_border;
+                        outline: none;
+                        outline-color: $blue
+                        color: $white;
+                    input[type="submit"]
+                        border: initial
+                        padding: 10px 15px;
+                        background: $blue;
+                        border-radius: 5px
+                        cursor: pointer
+                .captcha
+                    display: flex;
+                    @media screen and ( max-width: 768px )
+                        flex-direction: column
+                    .grecaptcha-badge
+                        position: static !important
+                .swiper__controls
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: calculateHeight(60)
+                    .swiper-button-prev2,
+                    .swiper-button-next2
+                        border-radius: 50%;
+                        width: 40px 
+                        height: 40px
+                        outline: none;
+                        background-color: $dark3;
+                        cursor: pointer
+                        position: relative;
+                        &::after
+                            position: absolute;
+                            content: ''
+                            width: 30%;
+                            height: 30%;
+                            border-left: 2px solid $white;
+                            border-bottom: 2px solid $white;
+                            transform: rotate(45deg);
+                            top: 50%;
+                            left: 50%;
+                            margin-top: -15%;
+                            margin-left: -10%;
+                    .swiper-button-next2
+                        width: 50px 
+                        height: 50px
+                        background-color: $blue;
+                        &::after
+                            border: initial
+                            border-right: 2px solid $white;
+                            border-top: 2px solid $white;
+                            left: initial
+                            right: 50%;
+                            margin-left: initial;
+                            margin-right: -15%;
+                    .swiper-pagination2
+                        width: 80%
+                        display: inline-flex;
+                        justify-content: space-around
+                        .swiper-pagination-bullet
+                            width: 20%;
+                            background: $dark3
+                            border-radius: 0
+                        .swiper-pagination-bullet-active
+                            background: $blue
+                            width: 44%;
+
+                
         &__content
             display: flex;
             flex-direction: column;

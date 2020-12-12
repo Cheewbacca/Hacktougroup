@@ -1,14 +1,18 @@
 section.section
     #review
         .add_comment__content
+            .message
+                .message__content.danger
+                    #message_cross
+                    p.headings_font Error
             #reviewCross
             h2.blue_font Оставить коментарий
             h3.headings_font Оставить коментарий
-            form(action="")
-                label(for="name").review_font Ваше имя
-                input(type="text" id="name" name="name").medium_font
-                label(for="comment").review_font Коментарий
-                textarea(name="comment" id="comment").medium_font 
+            form(action="")#addReview
+                label(for="name").review_font Ваше имя*
+                input(type="text" id="name" name="name" required).medium_font
+                label(for="comment").review_font Коментарий*
+                textarea(name="comment" id="comment" required).medium_font 
                 button(type="submit" ).medium_font Оставить коментарий
 
     .reviews.main_padding.first_section

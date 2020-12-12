@@ -6,6 +6,7 @@ html
         link(rel="stylesheet", href="static\\css\\services.css")
         link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css")
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     body
         section.section
@@ -17,6 +18,8 @@ html
 
         script(src="static//js//libs.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js")
+        <script type="text/javascript"> var onloadCallback = function() { console.log("grecaptcha is ready!"); };</script>
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer> </script>
         script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
         script(src="static//js//main.js")
         script(src="static//js//services.js")

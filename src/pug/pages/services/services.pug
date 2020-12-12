@@ -1,17 +1,37 @@
 section.section
     section.services
-        //- #order
-        //-     .order_content
-        //-         h2.blue_font Заказать
-        //-         h3.headings_font Информация по заказу
-        //-         p.review_font Внимание! Поля отмеченные * обязательны к заполнению! Остальные поля не обязательны!
-        //-         span#order_price.subtitle_font Взлом Vk.com -1000р
-        //-         form(action="")
-        //-             label(for="name").review_font Ваше имя
-        //-             input(type="text" id="name" name="name").medium_font
-        //-             label(for="comment").review_font Коментарий
-        //-             textarea(name="comment" id="comment").medium_font 
-        //-             button(type="submit" ).medium_font Оставить коментарий
+        #order
+            .order_content
+                #order_cross
+                .message
+                    .message__content.danger
+                        #message_cross
+                        p.headings_font Error
+                h2.blue_font Заказать
+                h3.headings_font Информация по заказу
+                p.review_font Внимание! Поля отмеченные * обязательны к заполнению! Остальные поля не обязательны!
+                span#order_price.subtitle_font Взлом <span class="realTarget"> Vk.com</span> 
+                form#order_form(action="" method="POST").swiper-container.swiper2
+                    .swiper-wrapper
+                        .swiper-slide.order_content-slide
+                            label(for="email").review_font Ваш email*
+                            label(for="url").review_font Ссылка на жертву*
+                            input(type="email" id="email" name="email").medium_font
+                            input(type="url" id="url" name="url").medium_font
+                        .swiper-slide.order_content-slide
+                            label(for="telegram").review_font Ваш телеграм
+                            label(for="info").review_font Дополнительная информация*
+                            input(type="text" id="telegram" name="telegram").medium_font
+                            textarea(id="info" name="info").medium_font
+                        .swiper-slide.order_content-slide.captcha
+                            <div class="g-recaptcha" data-sitekey="6LdsqgMaAAAAAMYvdPrdUnVqo42nZglnrpgcq3ym" data-theme="dark" data-callback="getCaptcha"></div>
+                            input(type="submit" value="Заказать").medium_font
+                            
+
+                .swiper__controls
+                    .swiper-button-prev2
+                    .swiper-pagination2 
+                    .swiper-button-next2
 
         .services__content.main_padding
             include all_services

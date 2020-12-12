@@ -40,6 +40,50 @@
     @media screen and ( max-width: 768px )
         display: block;
 
+.message
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0
+    width: 100%;
+    height: 100%;
+    background: $form
+    z-index: 99
+    display: none;
+    align-items: center;
+    justify-content: center;
+    &__content
+        padding: calculateWidth(50)
+        border-radius: 5px
+        max-width: 90%
+        position: relative
+        #message_cross
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer
+            &::after,
+            &::before
+                position: absolute;
+                content: '';
+                height: 100%;
+                width: 1px;
+                background: $white;
+                transform: rotate(45deg)
+                top: 0;
+                left: 50%;
+                margin-left: -0.5px
+            &::before
+                transform: rotate(-45deg)
+                
+    .danger
+        background: red;
+    .success
+        background: green
+
 .underline
     position: relative;
     &_white

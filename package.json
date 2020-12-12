@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "proxy": "lcp --proxyUrl https://www.google.com"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +23,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-tinypng": "^1.0.2",
     "jquery": "^3.5.0",
+    "local-cors-proxy": "^1.1.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
