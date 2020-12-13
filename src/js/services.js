@@ -116,7 +116,7 @@ $('#order_form').on('submit', function(e){
             data: { 
                 email: $('#email').val(), 
                 url: $('#url').val(),
-                telegram: $('#telegram').val(),
+                telegram: $('#telegramForm').val(),
                 info: $('#info').val() ,
                 target: $('.realTarget').text()
             }
