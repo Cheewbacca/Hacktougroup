@@ -1,0 +1,20 @@
+header.header  
+    a(href="index.html").header-logo.logo_font-header Hg
+    .burger
+    nav.header__navigation 
+        ul.header__navigation-closed.hidded
+            -let pagesAlternative = new Map();
+            -pagesAlternative.set('Главная', 'index.html').set('Услуги', 'services.html').set('Отзывы', 'reviews.html');
+
+            -for (let [key, value] of pagesAlternative){
+                li.active_link
+                    a(href="" + value).menu_font= key
+            -}
+            li 
+                .header__navigation-social
+                    a(href="#")
+                        include ../../../../build/static/img/svg/telegram.svg
+                    a(href="#")
+                        include ../../../../build/static/img/svg/support.svg
+                        
+        
